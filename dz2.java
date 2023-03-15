@@ -9,31 +9,37 @@ import java.util.Queue;
 
 public class dz2 {
     public static void main(String[] args) {
-        Deque link = new LinkedList<>();
+        LinkedList link = new LinkedList<>();
 
         for (int i = 0; i < 10; i++) {
             link.add(i);
         }
 
-        System.out.println(link.toString());
+        System.out.println(link);
 
         Integer x = 99;
 
         enqueue(link, x);
-        dequeue(link);
-        first(link);
+        System.out.println(link);
+
+        System.out.println(dequeue(link));
+        System.out.println(link);
+
+        System.out.println(first(link));
         System.out.println(link);
     }
 
-    private static void first(Deque link) {
-        System.out.println(link.element());
+    private static Object first(LinkedList link) {
+        return link.get(0);
     }
 
-    private static void dequeue(Deque link) {
-        System.out.println(link.pollFirst());
+    private static Object dequeue(LinkedList link) {
+        Object x = link.get(0);
+        link.remove(0);
+        return x;
     }
 
-    private static void enqueue(Deque link, Integer x) {
+    private static void enqueue(LinkedList link, Integer x) {
         link.add(x);
     }
 }
