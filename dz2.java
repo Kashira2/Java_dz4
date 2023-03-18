@@ -1,6 +1,4 @@
-import java.util.Deque;
 import java.util.LinkedList;
-import java.util.Queue;
 
 // Реализуйте очередь с помощью LinkedList со следующими методами:
 // enqueue() - помещает элемент в конец очереди,
